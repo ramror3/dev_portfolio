@@ -42,4 +42,16 @@ class PortfoliosController < ApplicationController
 			end
 		end
 	end
+
+	def destroy
+		@portfolio_item = Portfolio.find(params[:id])
+		@portfolio_item.destroy
+
+		respond_to do |format|
+      if @portfolio_item.save
+        format.html { redirect_to portfolios_path, notice: 'portfolio item was successfully created.' }
+        # format.json { render :show, status: :created, location: @portfolio_item }
+      end
+    end
+	end
 end
