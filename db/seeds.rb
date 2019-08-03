@@ -29,7 +29,7 @@ puts "5 skills created"
 		title: "Portfolio title: #{portfolio_item}",
 		subtitle: "Inner Engineering",
 		body: "So much depth and insight was offered to look at my own mind and see how the same thought process and emotions that were capable of causing me misery can be a miraculous instrument to create my life joyously.",
-		main_image: "https://via.placeholder.com/350x150",
-		thumb_image: "https://via.placeholder.com/650x350"
+		main_image: "https://via.placeholder.com/300x300",
+		thumb_image: "https://via.placeholder.com/300x300"
 	)
 end
