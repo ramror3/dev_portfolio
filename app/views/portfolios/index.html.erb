@@ -2,7 +2,7 @@
 <p><%= link_to 'New', new_portfolio_url %></p>
 
 <% @portfolio_items.each do |port| %>
-	<p><b><%= link_to port.title, portfolio_url(port.id) %></b></p>
+	<p><b><%= link_to port.title, portfolio_show_path(port) %></b></p>
 	<p><%= port.subtitle %></p>
 	<p><%= port.body %></p>
 	<%= image_tag port.thumb_image unless port.thumb_image.nil? %>
