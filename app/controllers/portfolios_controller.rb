@@ -10,7 +10,7 @@ class PortfoliosController < ApplicationController
 	end
 
 	def create
-		binding.pry
+		# binding.pry
 		@portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
 
 		respond_to do |format|
