@@ -12,14 +12,19 @@ class Portfolio < ApplicationRecord
 	#set default values
 	after_initialize :set_defaults
 
-	def set_defaults
-		self.main_image ||= "https://via.placeholder.com/200x200"
-		self.thumb_image ||= "https://via.placeholder.com/200x200"
-	end
+	# def set_defaults
+	# 	self.main_image ||= "https://via.placeholder.com/200x200"
+	# 	self.thumb_image ||= "https://via.placeholder.com/200x200"
+	# end
 
 	#or
 	# if self.main_image == nil
 	# 	self.main_image = "https://via.placeholder.com/200x200"
 	# end
 	
+	#we can call the concern here
+	def set_defaults
+		self.main_image ||= Placeholder.image_generator(height: '200', width: '200')
+		self.thumb_image ||= Placeholder.image_generator(height: '300', width: '300')
+	end
 end
